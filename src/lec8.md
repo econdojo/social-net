@@ -81,350 +81,311 @@ style: |
 
 <img src="images/github.png" width="30" height="30" class="logo"> @econdojo &nbsp;&nbsp;&nbsp;&nbsp; <img src="images/youtube.png" width="30" height="30" class="logo"> @BusinessSchool101 &nbsp;&nbsp;&nbsp;&nbsp; <img src="images/slu.png" width="30" height="30" class="logo"> Saint Louis University
 
-**Date:** November 11, 2025
+**Date:** November 10, 2025
 
 ---
 
 ## The Road Ahead
 
-1. [Perfect Bayesian Equilibrium](#perfect-bayesian-equilibrium-pbe)
+1. [Introduction to PBE](#introduction-finding-our-place)
 2. [Screening Games](#screening-games)
 3. [Adverse Selection](#adverse-selection)
 4. [Signaling Games](#signaling-games)
-5. [Separating Equilibrium](#separating-equilibrium)
-6. [Pooling Equilibrium](#pooling-equilibrium)
-7. [Semi-Separating Equilibrium](#semi-separating-equilibrium)
+5. [Three Types of Equilibria](#three-types-of-equilibria)
+6. [Off-the-Path Beliefs](#off-the-path-beliefs)
+7. [Applications](#applications)
 
 ---
 
-## Perfect Bayesian Equilibrium (PBE)
+## Introduction: Finding Our Place
 
-Finding our place in the game theory toolkit:
+**Our journey so far**:
 
-| Game Timing | Information | Solution Concept |
-|-------------|-------------|------------------|
-| Simultaneous | Complete | Nash Equilibrium |
-| Sequential | Complete | Subgame Perfect Equilibrium |
-| Simultaneous | Incomplete | Bayesian Nash Equilibrium |
-| **Sequential** | **Incomplete** | **Perfect Bayesian Equilibrium** |
+<table>
+<tr><th>Game Timing</th><th>Information</th><th>Solution Concept</th></tr>
+<tr><td>Simultaneous</td><td>Complete</td><td>Nash Equilibrium</td></tr>
+<tr><td>Sequential</td><td>Complete</td><td>Subgame Perfect Equilibrium</td></tr>
+<tr><td>Simultaneous</td><td>Incomplete</td><td>Bayesian Nash Equilibrium</td></tr>
+<tr><td><b>Sequential</b></td><td><b>Incomplete</b></td><td><b>Perfect Bayesian Equilibrium</b></td></tr>
+</table>
 
-**Key insight**: PBE combines sequential rationality (from SPE) with beliefs about types (from BNE)
-
----
-
-## Definition of PBE
-
-A Perfect Bayesian Equilibrium is a set of strategies and beliefs such that:
-1. Strategies are sequentially rational given beliefs
-2. Players update beliefs via Bayes' rule wherever possible
-
-**Critical point**: A PBE solution requires BOTH strategies AND beliefs
-- Leaving out one means your answer is wrong
-- Common mistake: forgetting beliefs (like forgetting off-path strategies in SPE)
-
-**Why beliefs matter**: In incomplete information, credibility of threats depends on what you believe about opponent types
+**PBE** combines the core ideas of SPE (handling sequential moves) and BNE (handling private information)
 
 ---
 
-## Three Pillars of PBE
+## The Definition: What is PBE?
 
-**Pillar 1: Strategies AND Beliefs**
-- Solution must specify what players do (strategies) and what they think (beliefs)
-- These are inseparable partners
+A **Perfect Bayesian Equilibrium** is a set of strategies and beliefs such that:
+1. Strategies are **sequentially rational** given players' beliefs
+2. Players update beliefs via **Bayes' rule** wherever possible
 
-**Pillar 2: Sequential Rationality**
-- Strategy must be best choice at every point, given current beliefs
-- Credibility filtered through beliefs: "Maybe I fight a weak type but not a strong type"
-
-**Pillar 3: Updating with Bayes' Rule**
-- Initial prior belief → Observe action → Updated posterior belief
-- Example: If only strong types bully, seeing bully makes you certain opponent is strong
-- Caveat: Only works "wherever possible" (when observed action has positive probability)
+**Critical insight**: A PBE specifies BOTH strategies AND beliefs. Forgetting one part means the entire solution is incorrect
 
 ---
 
-## Off the Equilibrium Path
+## The Three Pillars of PBE
 
-**The problem**: What if a player does something that should never happen?
-- Proposed equilibrium assigns zero probability to this action
-- Bayes' Rule breaks down (division by zero)
-- Called "off the equilibrium path"
+**Pillar 1: Strategies AND Beliefs** (A New Partnership)
+- The solution must specify what players do (strategies) AND what they think (beliefs)
+- This is an inseparable pair—leave out one, your answer is wrong
 
-**Example**: In separating equilibrium where strong type Reveals and weak type Hides
-- If we see Hide → Bayes' Rule tells us type is weak (on path)
-- If we see unexpected action → Must specify belief without Bayes' Rule (off path)
+**Pillar 2: Sequential Rationality** (Making Threats Believable)
+- Players must actually want to follow through on their stated plans at every decision point
+- A threat's credibility depends on what you believe about your opponent's type
 
-**Importance**: Off-path beliefs justify on-path actions
-- The threat of what would happen off path prevents players from deviating
+**Pillar 3: Updating Beliefs with Bayes' Rule** (Learning as You Go)
+- Players start with prior beliefs and update them as they observe actions
+- Bayes' Rule provides the logical method for updating beliefs on the equilibrium path
 
 ---
 
-## Screening vs. Signaling Games
+## The Big Caveat: "Wherever Possible"
 
-Two main categories of PBE applications:
+**Challenge**: What happens when a player observes an action that should never happen according to the equilibrium strategies?
 
-| Type | Who Moves First | Complexity | Signal Information |
-|------|----------------|------------|-------------------|
-| **Screening** | Uninformed player | Simpler | First move cannot signal private info |
-| **Signaling** | Informed player | More complex | First move can signal type |
+- These situations are known as being **"off the equilibrium path"**
+- Bayes' Rule cannot be applied (probability = 0 → divide by zero error)
+- Defining beliefs in these unexpected scenarios is a key challenge in solving PBE
 
-**Signaling game outcomes**:
-- Separating equilibrium: Different types choose different actions
-- Pooling equilibrium: All types choose same action
-- Semi-separating equilibrium: One type mixes, creating strategic bluffing
+**Key insight**: Off-the-path beliefs matter because the threat of what might happen off the path justifies players' actions on the path
+
+---
+
+## PBE Summary Table
+
+<table>
+<tr><th>Component</th><th>Its Job in the Game</th></tr>
+<tr><td>Strategies</td><td>Action plans for each player at every possible point in the game</td></tr>
+<tr><td>Beliefs</td><td>Probabilistic assessment of opponent's type, updated throughout</td></tr>
+<tr><td>Sequential Rationality</td><td>Ensures strategies are logical and threats are credible</td></tr>
+<tr><td>Bayes' Rule</td><td>Logical method for updating beliefs on the equilibrium path</td></tr>
+</table>
 
 ---
 
 ## Screening Games
 
-**Definition**: Incomplete information game where the uninformed player moves first
+**Definition**: A game of incomplete information where the **uninformed player moves first**
 
-**Example game structure**:
-1. Nature chooses Player 2's type: Weak (prob $p$) or Strong (prob $1-p$)
-2. Player 1 (uninformed) chooses: Escalate or Quit
-3. Player 2 (informed) observes choice, then decides: Fight or Concede
+**Key characteristics**:
+- Uninformed player cannot signal information (they don't have any)
+- Uninformed player's action can "screen" or "test" the informed player
+- Informed player responds differently based on their type
 
-**Key feature**: Dashed line in game tree shows Player 1's information set (uncertainty about type)
+**Result**: The uninformed player's action separates (filters) different types by eliciting different responses
 
 ---
 
-## Solving a Screening Game
+## Screening Game Example: Escalation
 
-**Step 1**: Solve for informed player (Player 2)
-- Weak type: Concede (0) > Fight (-0.1) → Always concede
-- Strong type: Fight (0.8) > Concede (0) → Always fight
+**Setup**:
+- Nature chooses Player 2's type: Weak (probability $p$) or Strong (probability $1-p$)
+- Player 1 (uninformed) chooses: Escalate or Quit
+- Player 2 (informed, knows own type) chooses: Fight or Concede
 
-**Step 2**: Solve for uninformed player (Player 1)
-- Payoff from Quit: 0 (certain)
+**Payoffs** (if Player 1 quits): $(0, 1)$ regardless of type
+
+**Payoffs** (if Player 1 escalates):
+- Player 2 is Weak: Concede $(1, 0)$ or Fight $(0.7, -0.1)$
+- Player 2 is Strong: Concede $(1, 0)$ or Fight $(-0.2, 0.8)$
+
+---
+
+## Solving Screening Games: Step-by-Step
+
+**Step 1: Solve for the informed player (Player 2)**
+- Weak type: Concede (0 > -0.1)
+- Strong type: Fight (0.8 > 0)
+
+**Step 2: Solve for the uninformed player (Player 1)**
+- Expected payoff from Quit: 0
 - Expected payoff from Escalate: $p \times 1 + (1-p) \times (-0.2) = 1.2p - 0.2$
-- Escalate if $1.2p - 0.2 > 0$ → $p > \frac{1}{6}$
 
-**Equilibrium**:
-- If $p > \frac{1}{6}$: P1 escalates; P2 concedes if weak, fights if strong
-- If $p < \frac{1}{6}$: P1 quits; (P2's strategy still specified but not used)
+**Step 3: Compare payoffs**
+- Player 1 escalates if: $1.2p - 0.2 > 0$ → $p > \frac{1}{6}$
+- Player 1 quits if: $p < \frac{1}{6}$
 
 ---
 
-## Why "Screening"?
+## The Complete PBE Solution
 
-Escalating serves as a test or "screen":
-- Separates different types by eliciting different behaviors
-- Weak type concedes, strong type fights
-- Uninformed player can use this action to "filter" opponent types
+**If $p > \frac{1}{6}$** (Player 1 is optimistic):
+- Player 1: Escalate
+- Player 2: Concede if Weak, Fight if Strong
+- Belief: Player 2 is Weak with probability $p$
 
-**Strategic choice**: Whether to screen (escalate) or not (quit)
+**If $p < \frac{1}{6}$** (Player 1 is pessimistic):
+- Player 1: Quit
+- Player 2: Concede if Weak, Fight if Strong (off-path)
+- Belief: Player 2 is Weak with probability $p$
 
-**Contrast with signaling**: In screening, first mover has no private information to reveal
+**Remark**: Player 2's strategy is a complete plan of action, even for actions that don't occur in equilibrium
 
 ---
 
 ## Adverse Selection
 
-"If a person accepts your transaction at some price, does the very fact that they accepted it mean that you no longer want to go through with it?"
+**Core question**: "If a person accepts your transaction at some price, does the very fact that they accepted it mean you no longer want to go through with it?"
 
-**Definition**: Market failure when one party has crucial private information
-- Information asymmetry leads to dysfunctional outcomes
-- Prevents mutually beneficial trades
+**Definition**: A market problem arising when one person has important private information that the other lacks
 
-**Key examples**:
-- Insurance: Healthy vs. unhealthy customers
-- Used cars: "Market for lemons"
-- Real estate: Hidden defects
+**Key consequence**: Information imbalance can lead to market failure where mutually beneficial trades don't happen
 
 ---
 
-## Insurance Game Example
+## Adverse Selection: Insurance Example
 
-**Setup**:
-- Insurer wants profit, Customer wants protection
-- Private information: Customer knows if healthy or unhealthy
+<table>
+<tr><th>Metric</th><th>Healthy Customer</th><th>Unhealthy Customer</th></tr>
+<tr><td>Probability</td><td>60%</td><td>40%</td></tr>
+<tr><td>Cost to Insure</td><td>$400</td><td>$800</td></tr>
+<tr><td>Willingness to Pay</td><td>Up to $750</td><td>Up to $1,250</td></tr>
+</table>
 
-| Metric | Healthy (60%) | Unhealthy (40%) |
-|--------|--------------|-----------------|
-| Cost to Insure | $400 | $800 |
-| Willingness to Pay | $750 | $1,250 |
+**Insurer's dilemma**:
+- Low price ($500): Expected profit = $60 - $120 = -$60
+- High price ($1,000): Expected profit = $0 + $80 = $80
 
-**Insurer's calculation**:
-- High price ($1,000): Only unhealthy accept → $0.6(0) + 0.4(200) = 80$
-- Low price ($500): Both accept → $0.6(100) + 0.4(-300) = -60$
-
-**Result**: Insurer offers only high price → Healthy customers left uninsured
+**Equilibrium outcome**: Only high price offered → Only unhealthy buy → Market failure for healthy customers
 
 ---
 
-## Market Failure in Action
+## Real-World Adverse Selection
 
-**Why this is a problem**: Mutually beneficial trade is missed
-- If insurer knew customer was healthy: Offer $500, customer accepts, both better off
-- Insurer makes $100 profit, customer gets valued insurance
+**The "Market for Lemons"** (Used Cars):
+- Seller knows car's true quality; buyer doesn't
+- Buyer offers "average quality" price
+- Only sellers with below-average cars (lemons) accept
+- George Akerlof won Nobel Prize for this insight
 
-**Information asymmetry prevents this**:
-- Cannot safely offer low price (risk of unhealthy customers)
-- High price drives away profitable healthy customers
-- Market failure: Inefficient outcome
-
-**Same principle applies to**:
-- Used cars: Low offers accepted mainly by "lemons"
-- Houses: Low offers accepted by sellers hiding defects
+**Housing Market**:
+- Seller knows about hidden defects; buyer doesn't
+- Low offers more likely accepted by sellers with costly hidden problems
 
 ---
 
 ## Solutions to Adverse Selection
 
-**Four main approaches**:
+**Reputation**: Long-term incentives create trust
+- Car dealership vs. random Craigslist seller
+- Repeat business depends on honest dealing
 
-1. **Reputation**: Long-term incentives create trust
-   - Dealership vs. Craigslist seller
+**Third-Party Verification**: Independent experts level the playing field
+- Home inspectors, mechanics
 
-2. **Third-party verification**: Independent experts level information
-   - Home inspectors, mechanics
+**Government Regulation**: Lemon laws re-allocate risk
+- Buyer can return defective purchases
 
-3. **Government regulation**: Re-allocate risk
-   - Lemon laws give buyers right to return defective cars
-
-4. **Government intervention**: Pool all types
-   - Universal healthcare eliminates selection problem
-
-**Common thread**: All solutions close the information gap
+**Government Intervention**: Universal healthcare
+- Pools everyone together, avoiding selection problems
 
 ---
 
 ## Signaling Games
 
-**Definition**: Informed player moves first, action can signal their type
-- Opposite of screening games
-- First mover's action potentially reveals private information
+**Definition**: A game where the **informed player moves first**
 
-**Example**: Job market
-- Applicant (Player 1) knows own capability: High or Low type
-- Employer (Player 2) has 50/50 prior belief
-- Applicant chooses: College or High School
-- Employer observes choice, then decides: Hire or Pass
+**Key difference from screening**: The informed player's action can "signal" information about their private type
 
-**Three possible equilibrium types**: Separating, Pooling, Semi-separating
+**Critical insight**: The first mover must think carefully about what their action communicates to the uninformed player
+
+**Result**: Leads to fascinating outcomes—pooling, separating, and semi-separating equilibria
 
 ---
 
-## Separating Equilibrium
+## Three Types of Equilibria
 
-**Definition**: Different types choose different actions to distinguish themselves
-
-**Job market example**:
-- High type always goes to college
-- Low type always gets high school diploma
-
-**Employer's inference**:
-- See College → 100% certain applicant is High type
-- See High School → 100% certain applicant is Low type
-
-**Key insight**: Signal completely reveals private information
-- Uncertainty eliminated
-- Action speaks louder than words
+<table>
+<tr><th>Equilibrium Type</th><th>What Players Do</th><th>What Is Learned</th></tr>
+<tr><td>Separating</td><td>Different types choose different actions</td><td>Everything—action perfectly reveals type</td></tr>
+<tr><td>Pooling</td><td>All types choose the same action</td><td>Nothing—action provides no new information</td></tr>
+<tr><td>Semi-Separating</td><td>One type picks one action, other type mixes</td><td>Something—partial information revealed</td></tr>
+</table>
 
 ---
 
-## Pooling Equilibrium
+## Separating Equilibrium: Actions Speak Louder
 
-**Definition**: All types choose same action, hiding their identity
+**Example**: Job market with High/Low type applicant
+- High type → College
+- Low type → High School
 
-**Job market example**:
-- High type gets high school diploma
-- Low type also gets high school diploma
+**Key insight**: Perfect information revelation
+- Employer sees "College" → 100% certain applicant is High type
+- Employer sees "High School" → 100% certain applicant is Low type
 
-**Employer's inference**:
-- See High School → Learn nothing new
+**Signal is crystal clear**: Informed player's action completely reveals their private information
+
+---
+
+## Pooling Equilibrium: Hiding in the Crowd
+
+**Example**: Job market where both types get high school diploma
+- High type → High School
+- Low type → High School
+
+**Key insight**: No new information
+- Employer sees "High School" → learns nothing
 - Belief remains at prior: 50/50
 
-**Key insight**: Signal reveals no information
-- All types "pool" together
-- Beliefs don't change
+**Signal is uninformative**: Action provides no way to distinguish types
 
-**Complication**: Must still define off-path beliefs (what if someone goes to college?)
+**Challenge**: Must define off-the-path beliefs (what if someone goes to college?)
 
 ---
 
-## Semi-Separating Equilibrium
+## Semi-Separating: Strategic Bluffing
 
-**Definition**: One type uses pure strategy, other type mixes
-- Most strategically interesting case
-- Involves "true bluffing behavior"
+**Example**: Job market with mixed strategies
+- High type → always College (pure strategy)
+- Low type → sometimes College (30%), sometimes High School (70%) (mixed strategy)
 
-**Job market example**:
-- High type always goes to college (pure strategy)
-- Low type sometimes goes to college (30%), sometimes high school (70%) (mixed)
+**Key insight**: Partial information
+- "High School" signal → 100% certain it's Low type (perfectly revealing)
+- "College" signal → ambiguous, could be High type or bluffing Low type
+- Employer must use Bayes' rule to update beliefs
 
-**Employer's inference**:
-- See High School → 100% certain Low type (perfectly revealing)
-- See College → Ambiguous; use Bayes' rule to update belief
-
-**Key insight**: Partial information revealed, requires belief updating
+**Most strategically rich**: Involves true bluffing behavior
 
 ---
 
-## Summary: Three Equilibrium Types
+## War Game: Testing Separating Equilibrium
 
-| Type | What Players Do | What Uninformed Learns |
-|------|----------------|----------------------|
-| **Separating** | Different types → Different actions | Everything (perfect revelation) |
-| **Pooling** | All types → Same action | Nothing (beliefs unchanged) |
-| **Semi-Separating** | One type pure, other mixes | Something (partial revelation) |
+**Setup**: State 1 knows if it's Strong (60%) or Weak (40%)
+- State 1 chooses: Reveal (small cost) or Hide
+- State 2 wants to Fight Weak but Quit against Strong
 
-Understanding these patterns is key to analyzing signaling games
-
----
-
-## War Game: Finding Separating Equilibrium
-
-**Setup**:
-- State 1: Strong (60%) or Weak (40%)
-- State 1 knows own type, State 2 doesn't
-- State 1 chooses: Reveal (costly demonstration) or Hide
-- State 2 wants to Fight Weak, Quit against Strong
-
-**Testing separating strategy**: Strong Reveals, Weak Hides
-
-**Step 1**: State 2 sees Hide → Believes Weak with 100% → Fights
-
-**Step 2**: Check for profitable deviations
-- Strong: Reveal (0.99) > Hide (0.5) ✓
-- Weak: Hide (-1) > Reveal (-1.01) ✓
-
-**Result**: This IS a stable separating equilibrium
+**Test 1**: Strong Reveals, Weak Hides
+- State 2's belief: Hide → 100% Weak → Fight
+- Strong's deviation check: Reveal (0.99) vs. Hide (0.5) ✓
+- Weak's deviation check: Hide (-1) vs. Reveal (-1.01) ✓
+- **Result**: This IS a stable equilibrium
 
 ---
 
-## Failed Separating Equilibrium
+## War Game: Failed Separating Equilibrium
 
-**Testing opposite strategy**: Strong Hides, Weak Reveals
+**Test 2**: Strong Hides, Weak Reveals
+- State 2's belief: Hide → 100% Strong → Quit
+- Weak's deviation check: Reveal (-1.01) vs. Hide & Bluff (1) ✗
+- **Fatal flaw**: Weak type has massive incentive to bluff
 
-**Step 1**: State 2 sees Hide → Believes Strong with 100% → Quits
-
-**Step 2**: Check for profitable deviations
-- Strong: Hide (1) > Reveal (0.99) ✓
-- Weak: **Deviate!** Hide (1) >> Reveal (-1.01)
-
-**Fatal flaw**: Weak type has huge incentive to bluff
-- Can pretend to be strong and get much better payoff
-- Signal not credible
-
-**Result**: This is NOT a stable equilibrium
+**Key lesson**: Signals must be credible. No type should have a profitable deviation to lie or mimic another type
 
 ---
 
-## Pooling Equilibrium Example
+## Pooling Equilibrium: War Game
 
-**Testing strategy**: Both Strong and Weak Hide
+**Strategy**: Both Strong and Weak Hide
 
-**Step 1**: State 2 sees Hide → Learns nothing → Beliefs remain 60% Strong, 40% Weak
+**Analysis**:
+- State 2's belief: Hide → No new info → remains 60% Strong, 40% Weak
+- State 2's best response: Expected payoff = $0.6 \times (-1) + 0.4 \times 0.5 = -0.4$
+- Since -0.4 < 0, State 2 Quits
 
-**Step 2**: State 2's expected utility
-- Fight: $0.6(-1) + 0.4(0.5) = -0.4$
-- Quit: $0$
-- Best response: Quit (since $0 > -0.4$)
-
-**Step 3**: Check for profitable deviations
-- Strong: Hide (1) > Reveal (0.99) ✓
-- Weak: Hide (1) > Reveal (-1.01) ✓
+**Deviation checks**:
+- Strong: Hide (1) vs. Reveal (0.99) ✓
+- Weak: Hide (1) vs. Reveal (-1.01) ✓
 
 **Result**: This IS a stable pooling equilibrium
 
@@ -432,275 +393,265 @@ Understanding these patterns is key to analyzing signaling games
 
 ## Off-the-Path Beliefs
 
-**The challenge**: When unexpected action occurs with zero probability
-- Bayes' Rule cannot be applied
-- Must specify belief without logical constraint
+**The problem**: When a player makes a zero-probability move that "should never happen" according to equilibrium strategies
+- Bayes' Rule breaks down (divide by zero)
+- Must define beliefs for these unexpected scenarios
 
-**Testing "Both Reveal" equilibrium**:
-- If both types supposed to Reveal, seeing Hide is unexpected
-- Let $p$ = belief that hider is Strong
-- P2 fights if $0.5 - 1.5p > 0$ → $p < \frac{1}{3}$
+**Why it matters**: The threat of what might happen off the path justifies players' actions on the path
 
-**Checking deviations**:
-- Strong: For $p \leq \frac{1}{3}$, deviation profitable only if P2 quits
-- Weak: **Always has profitable deviation** (Hide always better than Reveal)
-
-**Result**: This equilibrium fails regardless of off-path belief
+**Solution approach**: Test all possible beliefs ($p$ from 0 to 1) to see if any can sustain the equilibrium
 
 ---
 
-## Beer-Quiche Game
+## Testing with Off-Path Beliefs
 
-**Setup**:
-- P1 type: Real Man (60%, prefers beer) or Wimp (40%, prefers quiche)
-- P1 chooses meal: Beer or Quiche
-- P2 (coward) observes, decides: Fight or Quit
-- P2 wants to fight only Wimps
+**Example**: Both types Reveal (alleged equilibrium)
+- On-path: Player 2 knows types after Reveal
+- Off-path: What if Player 1 Hides?
+- Let $p$ = Player 2's belief that Hider is Strong
+
+**Player 2's optimal action**:
+- Expected utility of Fight: $0.5 - 1.5p$
+- Fight if $p < \frac{1}{3}$, Quit if $p > \frac{1}{3}$
+
+**Deviation checks show**: Weak type always wants to deviate regardless of $p$
+- **Result**: This alleged equilibrium FAILS
+
+---
+
+## The Beer-Quiche Game: Setup
+
+**Players and Types**:
+- Player 1: Real Man (60%) prefers Beer, or Wimp (40%) prefers Quiche
+- Both types want to avoid a fight
+- Player 2: Coward who wants to fight only a Wimp
+
+**Sequence**:
+1. Player 1 chooses: Beer or Quiche
+2. Player 2 observes meal, chooses: Fight or Quit
+
+**Best possible outcomes**:
+- Real Man: Beer + Player 2 Quits (3 points)
+- Wimp: Quiche + Player 2 Quits (3 points)
+- Player 2: Fight a Wimp (1 point)
+
+---
+
+## Beer-Quiche: Pooling on Beer
+
+**Strategy**: Both Real Man and Wimp drink Beer
+
+**Player 2's on-path response**:
+- Sees Beer → Belief remains 60% Real Man, 40% Wimp
+- Expected payoff from Fight: $(0.6)(-1) + (0.4)(1) = -0.2$
+- Since -0.2 < 0, Player 2 Quits
+
+**Deviation check**: Would Wimp deviate to Quiche?
+- Current payoff: 2 (Beer + no fight)
+- Deviation payoff: 3 if Player 2 Quits, or 1 if Player 2 Fights
+- To prevent deviation, Player 2 must Fight after seeing Quiche
+
+---
+
+## Beer-Quiche: Off-Path Beliefs
+
+**Two solution classes**:
+
+**Class 1**: Fighting is strictly better ($P < \frac{1}{2}$)
+- Player 2 believes quiche-eater is Real Man with probability $P < \frac{1}{2}$
+- Player 2 strictly prefers to Fight
+
+**Class 2**: Indifference case ($P = \frac{1}{2}$)
+- Player 2 is exactly indifferent between Fight and Quit
+- Player 2 must Fight with probability $\sigma \geq \frac{1}{2}$ to deter Wimp's deviation
+- Wimp must be kept indifferent: $2 \geq \sigma(1) + (1-\sigma)(3)$ → $\sigma \geq \frac{1}{2}$
+
+---
+
+## Semi-Separating: Terrorist Game Setup
+
+**Players**: Terrorist group (Player 1) vs. Target (Player 2)
+- Nature chooses group type: Robust (40%) or Vulnerable (60%)
+- Robust type: Attack is dominant strategy (always profitable)
+- Vulnerable type: What to do?
 
 **Payoffs**:
-- P1: 2 points for avoiding fight + 1 point for preferred meal
-- P2: +1 for fighting Wimp, -1 for fighting Real Man, 0 for quitting
+- No attack: $(0, 0)$
+- Attack + Ignore: $(1, -1)$
+- Vulnerable attacks + Resist: $(-2, 2)$
+- Robust attacks + Resist: $(3, -3)$
 
-**Question**: Is there a pooling equilibrium where both types drink beer?
-
----
-
-## Solving Beer-Quiche Pooling
-
-**Step 1**: Both types drink beer
-
-**Step 2**: P2 sees beer → Beliefs unchanged (60% Real, 40% Wimp)
-- Expected payoff for Fight: $0.6(-1) + 0.4(1) = -0.2$
-- Payoff for Quit: $0$
-- Best response: Quit
-
-**Step 3**: Check deviations
-- Real Man: Beer gives 3 (maximum) → No deviation
-- Wimp: Beer gives 2; Quiche could give 3 if P2 quits, or 1 if P2 fights
-
-**Key**: To prevent Wimp's deviation, P2 must Fight if sees Quiche (off-path belief)
+**Question**: Can the Vulnerable type sometimes bluff?
 
 ---
 
-## Beer-Quiche Solutions
+## Semi-Separating: The Indifference Method
 
-**Solution Class 1**: $P(\text{Real Man}|\text{Quiche}) = p < \frac{1}{2}$
-- P2 strictly prefers to Fight quiche-eater
-- P1 strategy: Both drink beer
-- P2 strategy: Quit if beer, Fight if quiche (with belief $p < 1/2$)
+**Key principle**: For a player to mix strategies, they must be indifferent between their choices
 
-**Solution Class 2**: $P(\text{Real Man}|\text{Quiche}) = \frac{1}{2}$ exactly
-- P2 indifferent between Fight and Quit
-- P2 must fight with probability $\sigma \geq \frac{1}{2}$ to deter Wimp
-- This keeps Wimp's expected payoff from deviating at most 2
+**Step 1**: Make Vulnerable group indifferent
+- Let $R$ = Probability Target resists
+- Vulnerable's expected payoff from Attack: $(-2)R + (1)(1-R) = 0$
+- Solving: $1 - 3R = 0$ → $R = \frac{1}{3}$
 
-**Key lesson**: Off-path beliefs hold equilibrium together
-- Threat of fighting quiche-eater prevents deviation
-
----
-
-## Semi-Separating Equilibrium
-
-**When it arises**: Pure strategies (always attack or never attack) both fail
-
-**Example: Terrorist game**
-- Robust type (40%): Always attacks
-- Vulnerable type (60%): Mixes between attack and not attack
-- Target: Doesn't know type, must respond to attack
-
-**Key concept**: Strategic indifference
-- For player to mix, must be indifferent between choices
-- Opponent's mixing probability must make player exactly indifferent
+**Step 2**: Make Target indifferent
+- Let $P$ = Target's belief attacker is Robust
+- Target's expected payoff from Resist: $(-3)P + (2)(1-P) = -1$
+- Solving: $2 - 5P = -1$ → $P = \frac{3}{5}$
 
 ---
 
-## Solving Semi-Separating: Indifference Conditions
+## Semi-Separating: Finding Bluff Frequency
 
-**Making Vulnerable type indifferent** (to mix between attack/not):
-- Payoff from not attacking: 0
-- Expected payoff from attacking: $-2R + 1(1-R) = 1 - 3R$
-- Set equal: $1 - 3R = 0$ → $R = \frac{1}{3}$
-- Target must resist with probability $\frac{1}{3}$
+**Step 3**: Use Bayes' rule to find bluffing frequency
+- Need $P(Robust|Attack) = \frac{3}{5}$
+- Let $\sigma_b$ = Probability Vulnerable attacks
 
-**Making Target indifferent** (to mix between resist/ignore):
-- Let $P$ = posterior belief attacker is Robust
-- Expected payoff from resisting: $-3P + 2(1-P) = 2 - 5P$
-- Payoff from ignoring: -1
-- Set equal: $2 - 5P = -1$ → $P = \frac{3}{5}$
+Using Bayes' rule: $\frac{3}{5} = \frac{0.4 \times 1}{0.4 \times 1 + 0.6 \times \sigma_b}$
 
----
+Solving: $\sigma_b = \frac{4}{9}$
 
-## Connecting Bluff to Belief
-
-**Using Bayes' Rule** to find Vulnerable type's bluffing frequency:
-
-$$P(\text{Robust}|\text{Attack}) = \frac{P(\text{Attack}|\text{Robust}) \cdot P(\text{Robust})}{P(\text{Attack})}$$
-
-$$\frac{3}{5} = \frac{1 \times 0.4}{0.4 + \sigma_v \times 0.6}$$
-
-Solving: $\sigma_v = \frac{4}{9}$
-
-**Equilibrium**:
+**Complete equilibrium**:
 - Robust: Always attacks
 - Vulnerable: Attacks with probability $\frac{4}{9}$
-- Target: Resists with probability $\frac{1}{3}$ (given attack)
-- Belief: $P(\text{Robust}|\text{Attack}) = \frac{3}{5}$
+- Target: Resists with probability $\frac{1}{3}$ after observing attack
 
 ---
 
 ## Single Raise Poker
 
-**Setup**:
-- P1 dealt: Ace (50%) or Queen (50%)
-- P2 has: King
-- P1 chooses: Bet or Fold
-- If P1 bets, P2 chooses: Call or Fold
+**Setup**: Player 1 dealt Ace (50%) or Queen (50%); Player 2 has King
+- Player 1: Bet or Fold
+- Player 2 (if P1 bets): Call or Fold
 
-**Payoffs** (P1 perspective):
-- Fold: -1
-- Bet → P2 folds: +1
-- Bet → P2 calls: Ace wins +2, Queen loses -2
+**Key insight**: Ace has dominant strategy (always Bet)
+- Folding: -1
+- Betting: +1 (if P2 folds) or +2 (if P2 calls)
 
-**Key insight**: Ace always bets (dominant strategy)
+**Question**: What should Queen do? Always bet? Never bet? Sometimes bet?
 
 ---
 
-## Testing Pure Strategies in Poker
+## Single Raise Poker: Testing Pooling
 
-**Pooling (both bet)**: Fails
-- P2's expected payoff for calling: $0.5(2) + 0.5(-2) = 0 > -1$
-- P2 always calls
-- Queen gets -2 from betting vs. -1 from folding → Deviates
+**Strategy**: Both Ace and Queen always Bet
 
-**Separating (Queen folds)**: Fails
-- P2 knows bet = Ace → P2 always folds
-- Queen could bluff and win +1 vs. -1 from folding → Deviates
+**Player 2's response**:
+- Sees Bet → No new info → 50% Ace, 50% Queen
+- Expected payoff from Call: $(0.5)(−2) + (0.5)(2) = 0$
+- Since 0 > -1, Player 2 Calls
 
-**Conclusion**: Must be semi-separating equilibrium
-
----
-
-## Solving Poker Semi-Separating
-
-**Making Queen indifferent** (to mix):
-- Payoff from folding: -1
-- Expected from betting: $-2\sigma_c + 1(1-\sigma_c) = 1 - 3\sigma_c$
-- Set equal: $1 - 3\sigma_c = -1$ → $\sigma_c = \frac{2}{3}$
-
-**Making P2 indifferent** (to mix):
-- Let $p$ = belief facing Queen after seeing bet
-- Expected from calling: $2p - 2(1-p) = 4p - 2$
-- Payoff from folding: -1
-- Set equal: $4p - 2 = -1$ → $p = \frac{1}{4}$
-
-**Finding bluff frequency** (using Bayes' Rule): $\sigma_b = \frac{1}{3}$
+**Queen's dilemma**:
+- Betting (with P2 calling): -2
+- Folding: -1
+- **Result**: Pooling fails—Queen wants to deviate to Fold
 
 ---
 
-## Poker Equilibrium
+## Single Raise Poker: Testing Separating
 
-**Complete equilibrium strategy**:
-- Ace: Always bets (100%)
-- Queen: Bets $\frac{1}{3}$ of time (bluffs), folds $\frac{2}{3}$ of time
-- P2 (after seeing bet): Calls $\frac{2}{3}$ of time, folds $\frac{1}{3}$ of time
-- Belief: $P(\text{Queen}|\text{Bet}) = \frac{1}{4}$
+**Strategy**: Ace Bets, Queen always Folds
 
-**Strategic lessons**:
-- Strong hand: Always aggressive
-- Weak hand: Bluff sometimes to remain unpredictable
-- Opponent: Mix responses to prevent exploitation
+**Player 2's belief**: Bet → 100% Ace
 
-**Key insight**: "Rich bluffing strategies" emerge naturally from rational play
+**Player 2's response**: Fold (payoff -1 vs. -2 from calling)
 
----
+**Queen's temptation**:
+- Sticking with Fold: -1
+- Deviating to Bet (P2 will fold): +1
+- **Result**: Separating fails—Queen wants to bluff
 
-## Chain Store Paradox
-
-**Original setup** (complete information):
-- Chain store is weak (price war unprofitable)
-- Faces potential competitor in Town 2
-- Logic: Backward induction → Always acquiesce
-- "Paradox": Real firms use aggressive price wars to deter entry
-
-**Why not really a paradox**: Simplified model doesn't capture real-world uncertainty
-
-**Resolution**: Introduce incomplete information
-- Rival uncertain if chain store is weak or strong
-- Strong store: Price war profitable
-- Creates possibility for strategic bluffing
+**Conclusion**: Must have semi-separating equilibrium
 
 ---
 
-## Chain Store with Incomplete Information
+## Single Raise Poker: Semi-Separating Solution
 
-**Setup**:
-- Prior belief: 90% weak, 10% strong
-- Strong store: Always fights (dominant strategy)
-- Question: What does weak store do?
+**Making Queen indifferent**:
+- Let $\sigma_c$ = Probability P2 calls
+- Queen's expected payoff from Bet: $\sigma_c(-2) + (1-\sigma_c)(1) = -1$
+- Solving: $1 - 3\sigma_c = -1$ → $\sigma_c = \frac{2}{3}$
+
+**Making Player 2 indifferent**:
+- Let $p$ = Belief attacker is Queen given Bet
+- P2's expected payoff from Call: $p(2) + (1-p)(-2) = -1$
+- Solving: $4p - 2 = -1$ → $p = \frac{1}{4}$
+
+**Finding bluff frequency**: Using Bayes' rule with $p = \frac{1}{4}$ → Queen bets with probability $\frac{1}{3}$
+
+---
+
+## Chain Store Paradox: Setup
+
+**Complete information version**:
+- Chain Store faces competitor in Town 1, then Rival in Town 2
+- Weak store payoffs: 0 (Price War), 1 (Acquiesce), 3 (Rival quits)
+- Backward induction → Always acquiesce
+
+**The "paradox"**: Logic says always be passive, but real firms fight price wars to build reputation
+
+**Resolution**: The paradox arises from assuming complete information. Real world has uncertainty!
+
+---
+
+## Chain Store: Incomplete Information
+
+**Two types of chain stores**:
+- Weak (90%): Price war payoff = 0
+- Strong (10%): Price war payoff = 2.5
+
+**Game structure**:
+- Strong type: Always fights (dominant strategy)
+- Weak type: What to do?
+
+**Rival's belief**: Initially 90% chance store is Weak
+
+**Key insight**: Uncertainty transforms price war into a credible signal, allowing strategic bluffing
+
+---
+
+## Chain Store: Semi-Separating Equilibrium
 
 **Testing pure strategies**:
-- Separating (weak acquiesces): Fails—bluffing is profitable
-- Pooling (weak fights): Fails—being challenged makes acquiescing better
+- Separating (Weak acquiesces): Fails—Weak wants to bluff (payoff 3 > 2)
+- Pooling (Weak always fights): Fails—Rival still enters, Weak gets payoff 1 < 2
 
-**Solution**: Semi-separating equilibrium
-- Weak store bluffs with probability $\frac{1}{9}$
-- Rival challenges with probability $\frac{1}{2}$
-- Creates strategic uncertainty
+**Solution**: Weak store bluffs sometimes
+- Weak fights with probability $\frac{1}{9}$ to keep Rival indifferent
+- Rival challenges with probability $\frac{1}{2}$ to keep Weak indifferent
 
----
-
-## Lessons from Chain Store
-
-**Key insights**:
-1. Weak store cannot always acquiesce → Bluffing becomes too attractive
-2. Weak store cannot always bluff → Skeptical rival would always challenge
-3. Only stable solution: Occasional bluffing, occasional challenging
-
-**Resolving the "paradox"**:
-- Incomplete information makes "irrational" price war rational
-- Bluffing prevents perfect predictability
-- Maintains strategic uncertainty
-- Prevents exploitation
-
-**Bottom line**: What seemed paradoxical under certainty becomes logical under uncertainty
+**Bottom line**: Bluffing is rational! It prevents the weak store from being perfectly predictable and exploitable
 
 ---
 
-## Summary: Key Takeaways
+## Key Takeaways
 
-**Perfect Bayesian Equilibrium**:
-- Combines sequential rationality with beliefs about types
-- Requires specifying both strategies AND beliefs
-- Updates via Bayes' rule wherever possible
+**Perfect Bayesian Equilibrium**: Essential tool for sequential games with incomplete information
+- Must specify BOTH strategies AND beliefs
+- Sequential rationality ensures credible threats given beliefs
+- Bayes' rule updates beliefs wherever possible
 
-**Three equilibrium types**:
-1. Separating: Actions reveal types completely
-2. Pooling: Actions hide types completely  
-3. Semi-separating: Actions partially reveal through mixing
+**Screening vs. Signaling**: Who moves first matters
+- Screening: Uninformed moves first → action tests/filters types
+- Signaling: Informed moves first → action reveals information
 
-**Applications**:
-- Screening: Uninformed moves first (escalation as test)
-- Signaling: Informed moves first (education, military displays)
-- Markets: Adverse selection and information asymmetry
+**Three equilibrium types**: Separating, Pooling, Semi-Separating
+- Semi-separating involves strategic bluffing and mixed strategies
+- Indifference conditions are key to solving mixed strategy equilibria
 
 ---
 
-## Final Thoughts
+## Applications Summary
 
-**Strategic bluffing is rational**:
-- Not random or irrational behavior
-- Carefully calculated to maintain uncertainty
-- Frequency determined by indifference conditions
+**Adverse Selection**: Information asymmetry causes market failures
+- Insurance, used cars, housing
+- Solutions: reputation, verification, regulation
 
-**Information is powerful**:
-- Can reveal types (separating)
-- Can hide types (pooling)
-- Can partially reveal (semi-separating)
+**Beer-Quiche Game**: Off-path beliefs enforce pooling equilibria
+- Multiple equilibrium classes depending on beliefs
 
-**Real-world relevance**:
-- Poker and sports (mixing strategies)
-- Business competition (chain store)
-- Labor markets (education signaling)
-- Insurance and used cars (adverse selection)
+**Poker & Chain Store**: Semi-separating equilibria in action
+- Bluffing emerges naturally from rational play
+- Prevents predictability and exploitation
 
-**Next**: Applications and extensions of PBE
+**Common thread**: Uncertainty about types creates strategic complexity and rich behavior
