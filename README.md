@@ -24,3 +24,30 @@ This course offers an introduction to game theory and its applications, building
 * [Lecture 6: Repeated Games](/pdf/lec6.pdf)
 * [Lecture 7: Bayesian Nash Equilibrium](/pdf/lec7.pdf)
 * [Lecture 8: Perfect Bayesian Equilibrium](/pdf/lec8.pdf)
+
+## 🤖 Teaching Assistant
+
+This course includes an AI-powered teaching assistant available 24/7 to help you master concepts, work through problems, and prepare for exams. The digital TA is trained on all course materials and provides personalized learning support.
+
+### Getting Started
+
+1. **Download this repository** (click the green "Code" button → "Download ZIP")
+2. **Install [VS Code](https://code.visualstudio.com)** (free)
+3. **Install GitHub Copilot extension** (free for students via [GitHub Student Developer Pack](https://education.github.com/pack))
+4. **Open this folder in VS Code** and launch Copilot Chat to start learning!
+
+### What the TA Can Do
+
+- Explain concepts with step-by-step clarity
+- Guide you through problem-solving
+- Answer questions at your own pace, anytime
+- Help you prepare for exams
+
+### Example Questions
+
+- "Walk me through finding the Nash equilibrium in a 2x2 game"
+- "How do I use backward induction to solve an extensive form game?"
+- "Help me understand problem 3 from Lecture 4."
+- "What's the difference between Bayesian Nash equilibrium and Perfect Bayesian equilibrium?"
+
+**Remember:** The TA is designed to enhance your learning, not replace it. Use it to deepen understanding while actively engaging with the material.
